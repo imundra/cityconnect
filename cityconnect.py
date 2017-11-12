@@ -5,6 +5,7 @@ import Nearby_Location_Details
 import Database_Add
 import Database_Remove
 import Database_Read
+import Database_Create
 import hackital
 import webbrowser
 
@@ -20,6 +21,10 @@ city = ""
 
 @app.route("/")
 def start():
+    try:
+        Database_Create.execute()
+    except:
+        print("Loading..")
     text="Search for a City!"
     return render_template('Background_Test.html',displaytext=text)
 
