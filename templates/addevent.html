@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>add an event</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("/static/Background2.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #4B0082;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #9370DB;
+}
+
+.rcorners1 {
+    border-radius: 25px;
+    border: 2px solid #FFFFFF;
+    background: #FFFFFF;
+    padding: 5px; 
+    width: 100%;
+    height: 92%;
+    opacity: 0.8;
+}
+
+</style>
+</head>
+<body>
+
+<div class="bg">
+    
+    <div class="topnav">
+        <a href="/">Back to City Search</a>
+	<a href="/myschedule/">Back to My Schedule</a>
+    </div>
+
+    <div class="rcorners1" align="center">
+        <form action="/updatedschedule/" align="center" method="post">
+		  <h3> The time typically spent here is <b> {{spendTime}} </b></h3>
+		  <h3> <em> {{MondayOperatingHours}} </em> </h3>
+		  <h3> <em> {{TuesdayOperatingHours}} </em> </h3>
+		  <h3> <em> {{WednesdayOperatingHours}} </em> </h3>
+		  <h3> <em> {{ThursdayOperatingHours}} </em> </h3>
+		  <h3> <em> {{FridayOperatingHours}} </em> </h3>
+		  <h3> <em> {{SaturdayOperatingHours}} </em> </h3>
+		  <h3> <em> {{SundayOperatingHours}} </em> </h3>
+          <h3> Start Time For Your Activity(ex. "12PM"):</h3>
+          <input type="text" name="starttime">
+          <br>
+          <h3> End Time For Your Activity(ex. "4PM"):</h3>
+          <input type="text" name="endtime">
+          <br>
+          <h3> Day (ex. "Monday"):</h3>
+          <input type="text" name="day">
+          <br><br>
+          <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
